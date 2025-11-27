@@ -11,5 +11,9 @@ p{
 	height: 150px;
 	background: rgba(0, 0, 255, 0.4);
 	margin-top: auto;
-	
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	align-items: flex-start;
 }
