@@ -1,4 +1,8 @@
-
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
 p{
 	color: red;
 } 
@@ -6,4 +10,5 @@ p{
 	width: 150px;
 	height: 150px;
 	background: blue;
+	margin-top: auto;
 }
