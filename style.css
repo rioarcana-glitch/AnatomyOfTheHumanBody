@@ -27,9 +27,8 @@ body {
 
 .dropdown-content {
     display: none;
-    position: absolute;
     background-color: #34495e;
-    min-width: 160px;
+    padding: 10px;
 }
 
 .dropdown-content a {
