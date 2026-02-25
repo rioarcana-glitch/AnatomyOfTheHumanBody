@@ -40,6 +40,3 @@ body {
 .dropdown-content a:hover {
     background-color: #1abc9c;
 }
-
-.dropdown:hover .dropdown-content {
-    display: block;
