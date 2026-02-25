@@ -11,6 +11,7 @@ body {
 .dropdown {
   position: relative;   
   display: inline-block;
+  left: 10px;
 }
 
 .dropbtn {
