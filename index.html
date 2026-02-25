@@ -8,7 +8,7 @@
 <h1> <u>Anatomy Scholars Project</u> </h1>
 <p> Anatomy blah bleh blah sad  AGHHH</p>
 <div class="navbar">
-<div class="dropdownmenu">
+<div id="dropdownmenu"class="dropdownmenu">
 <button class="dropbtn" onclick="togglemenu()">Systems</button>
 <div class="dropdown-content">
 <a href="DigestiveSystemIntro.html">Digestive System</a>
@@ -19,7 +19,7 @@
 </div>
 <script>
 function togglemenu() {
-var menu = document.getElementByID("dropdownmenu");
+var menu = document.getElementById("dropdownmenu");
 if (menu.style.display === "block") {
 menu.style.display = "none";
 } else {
