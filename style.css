@@ -71,4 +71,28 @@ top: 100%;
   transform: rotate(-90deg);
   transform-origin: center;
 }
+.submenu {
+	position: relative;
+}
+.submenu-btn {
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
 
+.submenu-content {
+  display: none;
+  position: absolute;
+  left: 100%;   
+  top: 0;
+  background-color: #2c3e50;
+  min-width: 180px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+.submenu-content.show {
+  display: block;
+}

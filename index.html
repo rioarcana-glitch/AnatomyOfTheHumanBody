@@ -10,17 +10,36 @@
 
 <div class="navbar">
 <div id="dropdownmenu" class="dropdownmenu">
+
 <button class="dropbtn" onclick="togglemenu()">
 Systems<span class="arrow">▼</span>
 </button>
+
 <div id="dropdown-content" class="dropdown-content">
+
+<div class="submenu">
+<button class="submenu-btn" onclick="toggleSubMenu(this)">
+Digestive System ▼ 
+</button>
+<div class="submenu-content">
 <a href="DigestiveSystemIntro.html">Digestive System</a>
+</div>
+</div>
+
+<div class="submenu">
+<button class="submenu-btn" onclick="toggleSubMenu(this)">
+Reproductive System ▼ 
+</button>
+<div class="submenu-content">
 <a href="ReproductiveSystemIntro.html">Reproductive System</a>
-<a href="NervousSystemIntro.html">Nervous System</a>
+</div>
 </div>
 </div>
 </div>
 
+*<a href="DigestiveSystemIntro.html">Digestive System</a>
+*<a href="ReproductiveSystemIntro.html">Reproductive System</a>
+*<a href="NervousSystemIntro.html">Nervous System</a>
 <script>
 function togglemenu() {
 var menu = document.getElementById("dropdown-content");
@@ -31,6 +50,10 @@ menu.style.display = "block";
 }
 var arrow = document.querySelector(".arrow");
 arrow.classList.toggle("rotate");
+}
+function toggleSubMenu(button) {
+var submenu = button.nextElementSibling
+submenu.classList.toggle("show");
 }
 </script>
 
