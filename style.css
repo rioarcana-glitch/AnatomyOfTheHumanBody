@@ -69,5 +69,6 @@ top: 100%;
 
 .arrow.rotate {
   transform: rotate(-90deg);
+  transform-origin: center;
 }
 
