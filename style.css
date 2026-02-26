@@ -52,6 +52,7 @@ top: 100%;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
   z-index: 1;
   margin-top: 2px;
+  fontsize: 20px;
 }
 
 .dropdown-content a {
@@ -63,7 +64,7 @@ top: 100%;
 .arrow {
   display: inline-block;
   transition: transform 0.3s ease;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .arrow.rotate {
