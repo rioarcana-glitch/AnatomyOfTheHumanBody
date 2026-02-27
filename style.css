@@ -67,9 +67,6 @@ top: 100%;
   font-size: 30px;
 }
 
-.arrow.rotate {
-  transform: rotate(-90deg);
-  transform-origin: center;
 }
 .submenu {
 	position: relative;
