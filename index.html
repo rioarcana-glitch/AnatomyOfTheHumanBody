@@ -88,8 +88,8 @@ Reproductive System ▼
 
 
 
-
 <script>
+
 function togglemenu(button) {
 
 var menu = button.nextElementSibling;
@@ -106,6 +106,28 @@ var submenu = button.nextElementSibling;
 submenu.classList.toggle("show");
 
 }
+
+
+/* closes menus if you click outside */
+
+document.addEventListener("click", function(event) {
+
+if (!event.target.closest(".dropdownmenu")) {
+
+var menus = document.querySelectorAll(".dropdown-content");
+var arrows = document.querySelectorAll(".arrow");
+
+menus.forEach(function(menu) {
+menu.classList.remove("show");
+});
+
+arrows.forEach(function(arrow) {
+arrow.classList.remove("rotate");
+});
+
+}
+
+});
 
 </script>
 
