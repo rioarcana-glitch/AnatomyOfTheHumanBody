@@ -22,15 +22,7 @@ p {
   width: 100%;
   z-index: 1000;
 }
-.navbar2 {
-  background-color: #2c3e50;
-  position: fixed;
-  padding: 10px 10px 10px 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
+
 .dropdownmenu {
 	position:relative;
 	font-size: 16px;
