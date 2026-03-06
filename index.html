@@ -49,20 +49,21 @@ Reproductive System ▼
 
 
 <script>
-function togglemenu() {
-var menu = document.getElementById("dropdown-content");
-if (menu.style.display === "block") {
-menu.style.display = "none";
-} else {
-menu.style.display = "block";
-}
-var arrow = document.querySelector(".arrow");
+function togglemenu(button) {
+
+var menu = button.nextElementSibling;
+menu.classList.toggle("show");
+
+var arrow = button.querySelector(".arrow");
 arrow.classList.toggle("rotate");
+
 }
+
 function toggleSubMenu(button) {
-var submenu = button.nextElementSibling
+
+var submenu = button.nextElementSibling;
 submenu.classList.toggle("show");
-}
+
 }
 
 </script>
