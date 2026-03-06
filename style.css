@@ -55,6 +55,9 @@ top: 100%;
   margin-top: 2px;
   font-size: 10px;
 }
+.dropdown-content.show {
+	display: block;
+}
 
 .dropdown-content a {
   color: white;
@@ -68,7 +71,6 @@ top: 100%;
   font-size: 30px;
 }
 
-}
 .submenu {
 	position: relative;
 	font-size: 30px;
