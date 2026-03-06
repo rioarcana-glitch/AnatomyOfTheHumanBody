@@ -43,14 +43,14 @@
 
 
 
-<div class="navbar">
+<div class="navbar2">
 <div id="dropdownmenu" class="dropdownmenu">
 
-   <button class="dropbtn" onclick="togglemenu()">
+   <button class="dropbtn" onclick="togglemenu2()">
    Gloss<span class="arrow">▼</span>
    </button>
 
-          <div id="dropdown-content" class="dropdown-content">
+          <div id="dropdown-content" class="dropdown-content2">
 
           <div class="submenu">
           <button class="submenu-btn" onclick="toggleSubMenu(this)">
@@ -93,6 +93,22 @@ function toggleSubMenu(button) {
 var submenu = button.nextElementSibling
 submenu.classList.toggle("show");
 }
+
+function togglemenu2() {
+var menu = document.getElementById("dropdown-content2");
+if (menu.style.display === "block") {
+menu.style.display = "none";
+} else {
+menu.style.display = "block";
+}
+var arrow = document.querySelector(".arrow");
+arrow.classList.toggle("rotate");
+}
+function toggleSubMenu(button) {
+var submenu = button.nextElementSibling
+submenu.classList.toggle("show");
+}
+
 </script>
 
 </body>
