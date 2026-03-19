@@ -102,9 +102,8 @@ top: 100%;
 
 
 .home-link {
-  position: fixed !important;
-  top: 10px !important;
-  left: 10px !important;
-  background-color: red; /* so you can SEE it */
+  position: fixed;
+  top: 10px;
+  left: 10px;
   z-index: 9999;
 }
