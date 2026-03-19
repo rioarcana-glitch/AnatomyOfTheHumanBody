@@ -102,15 +102,9 @@ top: 100%;
 
 
 .home-link {
-  position: fixed;   
-  top: 10px;         
-  left: 10px;        
-
-  padding: 10px 15px;
-  background-color: #2c3e50;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-
-  z-index: 1000;     
+  position: fixed !important;
+  top: 10px !important;
+  left: 10px !important;
+  background-color: red; /* so you can SEE it */
+  z-index: 9999;
 }
