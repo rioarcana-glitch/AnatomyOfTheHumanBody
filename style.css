@@ -65,6 +65,7 @@ top: 100%;
   padding: 20px;
   text-decoration: none;
   display: block;
+  font-size: clamp(14px, 1.2vw, 20px);
 }
 .arrow {
   display: inline-block;
@@ -84,7 +85,7 @@ top: 100%;
   width: 100%;
   text-align: left;
   cursor: pointer;
-  font-size: clamp(20px, 1.8vw, 30px);
+  font-size: clamp(15px, 1.8vw, 20px);
 }
 
 .submenu-content {
