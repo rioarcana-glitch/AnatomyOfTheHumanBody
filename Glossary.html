@@ -10,6 +10,7 @@
 
 <!-- DIGESTIVE SYSTEM -->
 <h2>Digestive System</h2>
+<p id="noResults" style="display:none;">No results found</p>
 <ul class="glossary-section">
 <li><strong>Digestive System:</strong> A group of organs that break down food and absorb nutrients.</li>
 <li><strong>Gastrointestinal Tract:</strong> The pathway food travels through the body.</li>
@@ -125,9 +126,11 @@
 <script>
 const searchBar = document.getElementById("searchBar");
 const sections = document.querySelectorAll(".glossary-section");
+const noResults = document.getElementById("noResults");
 
 searchBar.addEventListener("input", function () {
   const searchText = searchBar.value.toLowerCase();
+  let totalVisible = 0;
 
   sections.forEach(section => {
     let visibleCount = 0;
@@ -145,13 +148,14 @@ searchBar.addEventListener("input", function () {
       }
     });
 
-    // hide/show section title (the h2 above it)
     const title = section.previousElementSibling;
     title.style.display = visibleCount === 0 ? "none" : "block";
-
-    // hide/show the whole section
     section.style.display = visibleCount === 0 ? "none" : "block";
+
+    totalVisible += visibleCount;
   });
+
+  noResults.style.display = totalVisible === 0 ? "block" : "none";
 });
 </script>
 </body>
