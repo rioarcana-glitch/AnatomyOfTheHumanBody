@@ -13,18 +13,27 @@
 // Your data
 const data = {
   "digestive system": [
-    "https://my.clevelandclinic.org/health/body/21567-spleen",
-    "https://example2.com"
+    "https://www.nhs.uk/tests-and-treatments/spleen-problems-and-spleen-removal/",
+    "https://www.chp.edu/our-services/transplant/liver/education/organs/spleen-information",
+    "https://www.nhsinform.scot/illnesses-and-conditions/stomach-liver-and-gastrointestinal-tract/spleen-problems-and-spleen-removal/",
+    "https://my.clevelandclinic.org/health/body/21690-gallbladder",
+    "https://www.hawaiipacifichealth.org/healthier-hawaii/be-healthy/what-does-the-appendix-do-other-questions-about-the-bodys-mystery-organ/",
+    "https://my.clevelandclinic.org/health/body/24785-rectum-function",
+    "https://my.clevelandclinic.org/health/body/21567-spleen"
   ],
-  "respiratory system": [
-    "https://example3.com",
-    "https://example4.com"
+
+  "reproductive system": [
+    "https://my.clevelandclinic.org/health/articles/9118-female-reproductive-system"
   ],
+
   "circulatory system": [
-    "https://example5.com"
+    // (you didn’t include links here yet — add if you find more)
+  ],
+
+  "nervous system": [
+    // (same here — add later if needed)
   ]
 };
-
 document.getElementById("searchBox").addEventListener("input", function() {
   const input = this.value.toLowerCase();
   const results = document.getElementById("results");
