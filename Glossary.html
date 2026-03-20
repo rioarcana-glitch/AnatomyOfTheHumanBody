@@ -123,24 +123,35 @@
 <li><strong>Carbon Dioxide:</strong> Waste gas removed from body.</li>
 </ul>
 <script>
-const noResults = document.getElementById("noResults");
+const searchBar = document.getElementById("searchBar");
+const sections = document.querySelectorAll(".glossary-section");
 
 searchBar.addEventListener("input", function () {
   const searchText = searchBar.value.toLowerCase();
-  let visibleCount = 0;
 
-  items.forEach(function(item) {
-    const text = item.textContent.toLowerCase();
+  sections.forEach(section => {
+    let visibleCount = 0;
 
-    if (text.includes(searchText)) {
-      item.style.display = "list-item";
-      visibleCount++;
-    } else {
-      item.style.display = "none";
-    }
+    const items = section.querySelectorAll("li");
+
+    items.forEach(item => {
+      const text = item.textContent.toLowerCase();
+
+      if (text.includes(searchText)) {
+        item.style.display = "list-item";
+        visibleCount++;
+      } else {
+        item.style.display = "none";
+      }
+    });
+
+    // hide/show section title (the h2 above it)
+    const title = section.previousElementSibling;
+    title.style.display = visibleCount === 0 ? "none" : "block";
+
+    // hide/show the whole section
+    section.style.display = visibleCount === 0 ? "none" : "block";
   });
-
-  noResults.style.display = visibleCount === 0 ? "block" : "none";
 });
 </script>
 </body>
