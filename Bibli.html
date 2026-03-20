@@ -5,4 +5,46 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<input type="text" id="searchBox" placeholder="Enter topic...">
+<button onclick="searchLinks()">Search</button>
+
+<ul id="results"></ul>
+
+<script>
+// Your data (edit this part)
+const data = {
+  "digestive system": [
+    "https://example1.com",
+    "https://example2.com"
+  ],
+  "respiratory system": [
+    "https://example3.com",
+    "https://example4.com"
+  ],
+  "circulatory system": [
+    "https://example5.com"
+  ]
+};
+
+function searchLinks() {
+  const input = document.getElementById("searchBox").value.toLowerCase();
+  const results = document.getElementById("results");
+
+  results.innerHTML = "";
+
+  if (data[input]) {
+    data[input].forEach(link => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = link;
+      a.textContent = link;
+      a.target = "_blank";
+      li.appendChild(a);
+      results.appendChild(li);
+    });
+  } else {
+    results.innerHTML = "<li>No results found</li>";
+  }
+}
+</script>
 </body>
