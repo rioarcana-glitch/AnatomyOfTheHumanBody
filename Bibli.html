@@ -11,7 +11,6 @@
 <ul id="results"></ul>
 
 <script>
-// Your data
 const data = {
   "digestive system": [
     "https://www.nhs.uk/tests-and-treatments/spleen-problems-and-spleen-removal/",
@@ -22,27 +21,20 @@ const data = {
     "https://my.clevelandclinic.org/health/body/24785-rectum-function",
     "https://my.clevelandclinic.org/health/body/21567-spleen"
   ],
-
   "reproductive system": [
     "https://my.clevelandclinic.org/health/articles/9118-female-reproductive-system"
-  ],
-
-  "circulatory system": [
-    // (you didn’t include links here yet — add if you find more)
-  ],
-
-  "nervous system": [
-    // (same here — add later if needed)
   ]
 };
-document.getElementById("searchBox").addEventListener("input", function() {
-  const input = this.value.toLowerCase();
-  const results = document.getElementById("results");
 
+const results = document.getElementById("results");
+const searchBox = document.getElementById("searchBox");
+
+// 🔥 Function to display links
+function displayLinks(filter = "") {
   results.innerHTML = "";
 
   for (let topic in data) {
-    if (topic.includes(input)) {
+    if (topic.includes(filter)) {
       data[topic].forEach(link => {
         const li = document.createElement("li");
         const a = document.createElement("a");
@@ -58,8 +50,17 @@ document.getElementById("searchBox").addEventListener("input", function() {
   if (results.innerHTML === "") {
     results.innerHTML = "<li>No results found</li>";
   }
+}
+
+// ✅ Show everything on page load
+displayLinks();
+
+// ✅ Filter as you type
+searchBox.addEventListener("input", function() {
+  displayLinks(this.value.toLowerCase());
 });
 </script>
+
 
 </body>
 </html>
