@@ -2,5 +2,32 @@
 <head>
 </head>
 <body>
+<input type="text" id="searchBar" placeholder="Search glossary...">
+
+<ul id="glossaryList">
+  <li>Heart</li>
+  <li>Lungs</li>
+  <li>Stomach</li>
+  <li>Liver</li>
+  <li>Brain</li>
+</ul>
+<script>
+const searchBar = document.getElementById("searchBar");
+const items = document.querySelectorAll("#glossaryList li");
+
+searchBar.addEventListener("keyup", function () {
+  const searchText = searchBar.value.toLowerCase();
+
+  items.forEach(function(item) {
+    const text = item.textContent.toLowerCase();
+
+    if (text.includes(searchText)) {
+      item.style.display = "list-item";
+    } else {
+      item.style.display = "none";
+    }
+  });
+});
+</script>
 </body>
 </html>
