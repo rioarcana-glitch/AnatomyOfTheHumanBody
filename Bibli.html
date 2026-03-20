@@ -5,13 +5,12 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<input type="text" id="searchBox" placeholder="Enter topic...">
-<button onclick="searchLinks()">Search</button>
+<input type="text" id="searchBox" placeholder="Type a topic...">
 
 <ul id="results"></ul>
 
 <script>
-// Your data (edit this part)
+// Your data
 const data = {
   "digestive system": [
     "https://example1.com",
@@ -26,25 +25,31 @@ const data = {
   ]
 };
 
-function searchLinks() {
-  const input = document.getElementById("searchBox").value.toLowerCase();
+document.getElementById("searchBox").addEventListener("input", function() {
+  const input = this.value.toLowerCase();
   const results = document.getElementById("results");
 
   results.innerHTML = "";
 
-  if (data[input]) {
-    data[input].forEach(link => {
-      const li = document.createElement("li");
-      const a = document.createElement("a");
-      a.href = link;
-      a.textContent = link;
-      a.target = "_blank";
-      li.appendChild(a);
-      results.appendChild(li);
-    });
-  } else {
+  for (let topic in data) {
+    if (topic.includes(input)) {
+      data[topic].forEach(link => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = link;
+        a.textContent = topic + " - " + link;
+        a.target = "_blank";
+        li.appendChild(a);
+        results.appendChild(li);
+      });
+    }
+  }
+
+  if (results.innerHTML === "") {
     results.innerHTML = "<li>No results found</li>";
   }
-}
+});
 </script>
+
 </body>
+</html>
