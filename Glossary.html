@@ -9,17 +9,37 @@
 <input type="text" id="searchBar" placeholder="Search glossary...">
 
 <ul id="glossaryList">
-  <li><strong>Heart:</strong> Pumps blood around the body</li>
-  <li>Lungs</li>
-  <li>Stomach</li>
-  <li>Liver</li>
-  <li>Brain</li>
+
+  <li><strong>Peristalsis:</strong> Wave-like muscle contractions that move food through the digestive system.</li>
+
+  <li><strong>Villi:</strong> Small hair-like structures that absorb nutrients in the small intestine.</li>
+
+  <li><strong>Enzyme:</strong> A biological catalyst that speeds up chemical reactions.</li>
+
+  <li><strong>pH:</strong> A scale that measures how acidic or alkaline something is.</li>
+
+  <li><strong>Oesophagus:</strong> A muscular tube that moves food from the mouth to the stomach.</li>
+
+  <li><strong>Hydrochloric Acid:</strong> A strong acid in the stomach that helps break down food.</li>
+
+  <li><strong>Bile:</strong> A substance made in the liver that helps break down fats.</li>
+
+  <li><strong>Uterus:</strong> The organ where a baby develops during pregnancy.</li>
+
+  <li><strong>Testes:</strong> Organs that produce sperm and hormones in males.</li>
+
+  <li><strong>Neuron:</strong> A nerve cell that carries signals in the body.</li>
+
+  <li><strong>Artery:</strong> A blood vessel that carries blood away from the heart.</li>
+
+  <li><strong>Vein:</strong> A blood vessel that carries blood back to the heart.</li>
+
 </ul>
 <script>
 const searchBar = document.getElementById("searchBar");
 const items = document.querySelectorAll("#glossaryList li");
 
-searchBar.addEventListener("keyup", function () {
+searchBar.addEventListener("input", function () {
   const searchText = searchBar.value.toLowerCase();
 
   items.forEach(function(item) {
