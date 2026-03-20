@@ -7,6 +7,7 @@
 <body>
 <a href="index.html" class="home-link">🏠︎</a>
 <input type="text" id="searchBar" placeholder="Search glossary...">
+<p id="noResults" style="display:none;">No results found</p>
 
 <ul id="glossaryList">
 
@@ -36,21 +37,24 @@
 
 </ul>
 <script>
-const searchBar = document.getElementById("searchBar");
-const items = document.querySelectorAll("#glossaryList li");
+const noResults = document.getElementById("noResults");
 
 searchBar.addEventListener("input", function () {
   const searchText = searchBar.value.toLowerCase();
+  let visibleCount = 0;
 
   items.forEach(function(item) {
     const text = item.textContent.toLowerCase();
 
     if (text.includes(searchText)) {
       item.style.display = "list-item";
+      visibleCount++;
     } else {
       item.style.display = "none";
     }
   });
+
+  noResults.style.display = visibleCount === 0 ? "block" : "none";
 });
 </script>
 </body>
