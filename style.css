@@ -150,3 +150,12 @@ top: 100%;
   padding: 8px;
   margin: 5px;
 }
+
+.card {
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    background: rgba(0, 0, 255, 0.1);
+}
+
+
