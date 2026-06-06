@@ -161,5 +161,33 @@ top: 100%;
 
 
 
+#homepage{
+    background:
+    linear-gradient(
+        180deg,
+        #9be7ff,
+        #c8ffd4,
+        #fff4b8,
+        #ffd6e7
+    );
 
+    min-height:100vh;
+}
+
+#homepage .hero{
+    text-align:center;
+    padding:120px 20px;
+}
+
+#homepage .hero h1{
+    font-size:4rem;
+}
+
+#homepage .rainbow-section{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+    padding:40px;
+}
 
