@@ -25,6 +25,7 @@ p {
   z-index: 1000;
 
   padding: 10px;
+  box-sizing: border-box;
 }
 
 .dropdownmenu {
