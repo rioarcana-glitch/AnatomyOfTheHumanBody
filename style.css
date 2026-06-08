@@ -237,3 +237,10 @@ top: 100%;
     font-size:3rem;
 }
 
+@media (max-width:768px){
+
+    .dropbtn{
+        font-size:20px;
+    }
+
+}
